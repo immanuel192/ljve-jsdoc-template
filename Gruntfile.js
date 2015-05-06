@@ -37,7 +37,7 @@ module.exports = function (grunt) {
             },
 
             lesscopy: {
-                files: ['static/styles/jaguar.css'],
+                files: ['static/styles/ljve.css'],
                 tasks: ['copy:css']
             },
 
@@ -83,15 +83,15 @@ module.exports = function (grunt) {
 
         less: {
             dist: {
-                src: 'less/**/jaguar.less',
-                dest: 'static/styles/jaguar.css'
+                src: 'less/**/ljve.less',
+                dest: 'static/styles/ljve.css'
             }
         },
 
         copy: {
             css: {
-                src: 'static/styles/jaguar.css',
-                dest: DEMO_PATH + '/styles/jaguar.css'
+                src: 'static/styles/ljve.css',
+                dest: DEMO_PATH + '/styles/ljve.css'
             },
 
             js: {

@@ -1,7 +1,7 @@
 {
-  "name": "jaguarjs-jsdoc",
+  "name": "ljve-jsdoc-template",
   "version": "0.0.1",
-  "description": "Jaguar.js template for JSDoc 3",
+  "description": "ljve.io template for JSDoc 3 forked from Jaguar.js",
   "main": "Gruntfile.js",
   "dependencies": {
     "taffydb": "^2.7.2",
@@ -18,23 +18,19 @@
     "grunt-jsdoc": "~0.5.1",
     "grunt-contrib-connect": "~0.6.0"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git://github.com/davidshimjs/jaguarjs-jsdoc.git"
+    "url": "git://github.com/marcominetti/ljve-jsdoc.git"
   },
   "keywords": [
     "jsdoc",
     "jsdoc3",
-    "jaguar.js",
+    "ljve",
     "template"
   ],
-  "author": "davidshimjs",
   "license": "MIT",
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/davidshimjs/jaguarjs-jsdoc/issues"
+    "url": "https://github.com/marcominetti/ljve-jsdoc/issues"
   }
 }
