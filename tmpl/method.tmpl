@@ -11,10 +11,12 @@ var self = this;
             <?js= data.attribs + (kind === 'class' ? 'new ' : '') + (data.scope === 'static' ? longname : name) + (kind !== 'event' ? data.signature : '') ?>
         </h4>
     
-        <?js if (data.meta) {?>
-        <div class="tag-source">
-            <?js= self.linkto(meta.shortpath) ?>, <?js= self.linkto(meta.shortpath, 'line ' + meta.lineno, null, 'line' + meta.lineno) ?>
-        </div>
+        <?js if (data.role) {?>
+        <?js role.forEach(function(role_name) { ?>
+          <span class="type-signature">
+            <?js= role_name ?>
+          </span>
+        <?js }); ?>
         <?js } ?>
     </div>
 

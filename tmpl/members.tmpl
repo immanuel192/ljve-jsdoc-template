@@ -12,6 +12,14 @@ if (data.type && data.type.names) {
 <dt>
     <div class="nameContainer">
         <h4 class="name" id="<?js= id ?>"><?js= data.attribs + (data.scope === 'static' ? longname : name)  + typeSignature ?></h4>
+    
+        <?js if (data.role) {?>
+        <?js role.forEach(function(role_name) { ?>
+          <span class="type-signature">
+            <?js= role_name ?>
+          </span>
+        <?js }); ?>
+        <?js } ?>
     </div>
     
     <?js if (data.summary) { ?>
