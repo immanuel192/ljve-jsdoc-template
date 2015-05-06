@@ -1,6 +1,6 @@
 {
   "name": "ljve-jsdoc-template",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ljve.io template for JSDoc 3 forked from Jaguar.js",
   "main": "Gruntfile.js",
   "dependencies": {
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/marcominetti/ljve-jsdoc.git"
+    "url": "git://github.com/marcominetti/ljve-jsdoc-template.git"
   },
   "keywords": [
     "jsdoc",
@@ -31,6 +31,6 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/marcominetti/ljve-jsdoc/issues"
+    "url": "https://github.com/marcominetti/ljve-jsdoc-template/issues"
   }
 }
