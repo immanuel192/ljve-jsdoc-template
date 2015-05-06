@@ -312,8 +312,10 @@ exports.publish = function(taffyData, opts, tutorials) {
 
     var sourceFiles = {};
     var sourceFilePaths = [];
+    
+    var docletCache = {};
     data().each(function(doclet) {
-         doclet.attribs = '';
+        doclet.attribs = '';
 
         if (doclet.examples) {
             doclet.examples = doclet.examples.map(function(example) {
@@ -346,6 +348,24 @@ exports.publish = function(taffyData, opts, tutorials) {
             };
             sourceFilePaths.push(sourcePath);
         }
+        
+        if (docletCache.hasOwnProperty(doclet.longname) === true) {
+        	var cached_doclet = docletCache[doclet.longname];
+        	doclet.role = cached_doclet.role || [];
+        	data().filter({'___id':cached_doclet.___id}).remove();
+        }
+        
+        var role;
+		    if (doclet.meta) {
+            role = doclet.meta.filename.replace('.js','');
+            doclet.role = doclet.role || [];
+            if (doclet.role.indexOf(role) === -1){
+               	doclet.role.push(role);
+            }
+        }
+        
+        docletCache[doclet.longname] = doclet;
+       
     });
 
     // update outdir if necessary, then create outdir
